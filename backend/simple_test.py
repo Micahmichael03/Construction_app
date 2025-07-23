@@ -18,7 +18,7 @@ try:
     
     #Uncomment this part
     # # Azure OpenAI Configuration
-    # AZURE_API_KEY = "7mqqgtt8kGk1msrFDOureWrWSERYsnSoqu8MdV87qLMHrpaHlj07JQQJ99BFACHYHv6XJ3w3AAAAACOG682H"
+    # AZURE_API_KEY = ""
     # AZURE_ENDPOINT = "https://realestateai.openai.azure.com/"
     # AZURE_DEPLOYMENT = "o4-mini"
     

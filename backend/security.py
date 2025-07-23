@@ -5,7 +5,7 @@ from typing import Optional
 
 #Uncomment this part
 # # API Key for security validation
-# API_KEY = "7mqqgtt8kGk1msrFDOureWrWSERYsnSoqu8MdV87qLMHrpaHlj07JQQJ99BFACHYHv6XJ3w3AAAAACOG682H"
+# API_KEY = ""
 
 security = HTTPBearer()
 
