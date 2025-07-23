@@ -9,8 +9,8 @@ from openai import AzureOpenAI
 # Uncomment this part
 # # Azure OpenAI Configuration - Direct API Key
 # AZURE_API_KEY = ""
-# AZURE_ENDPOINT = "https://realestateai.openai.azure.com/"
-# AZURE_DEPLOYMENT = "o4-mini"
+# AZURE_ENDPOINT = ""
+# AZURE_DEPLOYMENT = ""
 
 print(f"API Key: {'Present' if AZURE_API_KEY else 'Missing'}")
 print(f"Endpoint: {AZURE_ENDPOINT}")

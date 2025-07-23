@@ -21,8 +21,8 @@ logger = logging.getLogger(__name__)
 #Uncomment this part
 # Azure OpenAI Configuration - Direct API Key
 # AZURE_API_KEY = ""
-# AZURE_ENDPOINT = "https://realestateai.openai.azure.com/"
-# AZURE_DEPLOYMENT = "o4-mini"
+# AZURE_ENDPOINT = ""
+# AZURE_DEPLOYMENT = ""
 
 class AIServices:
     def __init__(self):

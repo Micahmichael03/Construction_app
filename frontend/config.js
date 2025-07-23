@@ -2,8 +2,8 @@
 const CONFIG = {
     //  Uncomment this part
     // AZURE_API_KEY: "",
-    // AZURE_ENDPOINT: "https://realestateai.openai.azure.com/",
-    // AZURE_DEPLOYMENT: "o4-mini",
+    // AZURE_ENDPOINT: "",
+    // AZURE_DEPLOYMENT: "",
     API_BASE_URL: 'https://grumpy-adults-think.loca.lt'  // here change to http://localhost:8000 for local testing or the localtunning 
 };
 
