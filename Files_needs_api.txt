@@ -1,0 +1,17 @@
+
+path: backend/ai_services.py:23
+
+path: backend/apikey.py:9 
+
+path: backend/security.py:8 
+
+path: backend/simple_test.py:21 
+
+path: backend/test_azure.py:11
+
+path: forntend/config.js:4
+
+input the Azure api key in all these files.
+the numbers represents the line of the code in each files.
+
+please connect me if there is any misunderstanding.
