@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction AI Object Detection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head> 
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-top-row">
+                <h1><i class="fas fa-hard-hat"></i> Construction AI 🏗️ </h1>
+                <button id="darkModeToggle" class="dark-mode-toggle" title="Toggle Dark Mode">
+                    <i class="fas fa-moon toggle-icon"></i>
+                </button>
+            </div>
+            <p>📸 Object Detection & 💲Cost Estimator</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Camera Section (with its own results and Q&A) -->
+            <section class="camera-section">
+                <h2><i class="fas fa-camera"></i> Camera Capture</h2>
+                <div class="camera-controls">
+                    <button id="startCamera" class="btn btn-primary">
+                        <i class="fas fa-play"></i> Start Camera
+                    </button>
+                    <button id="stopCamera" class="btn btn-secondary" disabled>
+                        <i class="fas fa-stop"></i> Stop Camera
+                    </button>
+                    <button id="captureImage" class="btn btn-success" disabled>
+                        <i class="fas fa-camera"></i> Capture Image
+                    </button>
+                </div>
+                <div class="camera-container">
+                    <video id="video" autoplay playsinline></video>
+                    <canvas id="canvas" style="display: none;"></canvas>
+                </div>
+                <!-- Camera Preview Area -->
+                <div id="cameraPreviewArea" class="camera-preview-area" style="display: none; margin-top: 1.5rem;">
+                    <h3>Captured Image Preview</h3>
+                    <img id="cameraPreviewImg" src="" alt="Captured Preview" style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                </div>
+                <!-- Camera Analyze Button -->
+                <!-- DEBUG: This button must exist for JS event handler -->
+                <div class="analyze-btn-container">
+                    <button id="analyzeCameraImage" class="btn btn-primary" style="margin-top: 1rem; display: none;">
+                        <i class="fas fa-search"></i> Analyze Captured Image
+                    </button>
+                </div>
+                <!-- Camera Results Section -->
+                <section class="results-section" id="cameraResultsSection" style="display: none;"></section>
+                <!-- Camera Q&A Section -->
+                <section class="qa-section" id="cameraQaSection" style="display: none;"></section>
+            </section>
+
+            <!-- Visual Separator -->
+            <div class="section-separator"></div>
+
+            <!-- Upload Section (with its own results and Q&A) -->
+            <section class="upload-section">
+                <h2><i class="fas fa-upload"></i> Upload Image</h2>
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Drag & drop an image here or click to browse</p>
+                        <input type="file" id="fileInput" accept="image/*" hidden>
+                        <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
+                            Choose File
+                        </button>
+                    </div>
+                </div>
+                <!-- Upload Analyze Button -->
+                <div class="analyze-btn-container">
+                    <button id="analyzeUploadImage" class="btn btn-primary" style="margin-top: 1rem; display: none;">
+                        <i class="fas fa-search"></i> Analyze Uploaded Image
+                    </button>
+                </div>
+                <!-- Upload Results Section -->
+                <section class="results-section" id="uploadResultsSection" style="display: none;"></section>
+                <!-- Upload Q&A Section -->
+                <section class="qa-section" id="uploadQaSection" style="display: none;"></section>
+            </section>
+        </main>
+
+        <!-- LLM Q&A Section (for Azure OpenAI responses) -->
+        <div id="qaSection" style="display:none;">
+            <div id="qaLoading" style="display:none;">Loading...</div>
+            <div id="qaAnswer" style="display:none;"></div>
+        </div>
+
+        <!-- Error Modal -->
+        <div id="errorModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Error</h3>
+                    <span class="close" onclick="closeErrorModal()">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p id="errorMessage"></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" onclick="closeErrorModal()">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="secrets.js"></script> -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

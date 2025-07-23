@@ -1,0 +1,30 @@
+{
+  "name": "construction-ai-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for Construction AI Object Detection System",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "dev": "npx live-server --port=8080 --open=/",
+    "build": "echo 'Static files - no build step required'",
+    "test": "echo 'No tests configured'",
+    "lint": "echo 'No linting configured'"
+  },
+  "keywords": [
+    "construction",
+    "ai",
+    "object-detection",
+    "cost-estimation",
+    "yolo",
+    "fastapi"
+  ],
+  "author": "Construction AI Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 
